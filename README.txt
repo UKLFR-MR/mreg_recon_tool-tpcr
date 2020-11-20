@@ -1,4 +1,5 @@
-﻿Toolbox for reconstructing MREG data including tPCR acceleration. The code how to use tPCR is put in main_script.m.
+﻿Toolbox for reconstructing MREG data including tPCR acceleration. 
+ Please follow main_script.m to start tPCR acceleration.
 
 
 
@@ -30,4 +31,4 @@ Thimo Hugger
 Benjamin Zahneisen
 Jakob Assländer
 Bruno Riemenschneider
-
+Fei Wang
