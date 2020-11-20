@@ -1,4 +1,4 @@
-﻿Toolbox for reconstructing MREG data including tPCR acceleration. 
+﻿Toolbox for reconstructing MREG data including tPCR acceleration.
  Please follow main_script.m to start tPCR acceleration.
 
 
