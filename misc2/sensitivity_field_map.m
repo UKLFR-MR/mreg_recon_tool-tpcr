@@ -1,4 +1,4 @@
-function data=sensitivity_field_map(mreg_fname,ref_fname,recon_details)
+function data=sensitivity_field_map(mreg_fname,ref_fname,recon_details,traj)
     
     [~, header] = loadData(mreg_fname,1);
 
@@ -12,7 +12,6 @@ function data=sensitivity_field_map(mreg_fname,ref_fname,recon_details)
         data.ref_header = reference.header;
         data.sensmode   = reference.sensmode;
 
-        tra=loadTrajectory(['/raid/groupspace/ovoc/wang/old/gradient/' header.trajectory],[],[-3.7 -3 -3]);
-        data.trajectory=tra;
+        data.trajectory=traj;
    
 end
