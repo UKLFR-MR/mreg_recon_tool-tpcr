@@ -7,7 +7,7 @@ ref_filename='meas_MID00232_FID18298_gre_field_mapping.dat';%reference rawdata f
 recon_path=pwd;%
 % load your trajectory and correct gradient delay
 mreg_path=which('mreg_recon_tool');
-traj=loadTrajectory([mreg_path(1:(end-33)) 'grad_files/SoS_3mm_FOV_192_3_6_2_5.grad'],[],[-3.7 -3 -3]);
+traj=loadTrajectory([mreg_path(1:(end-33)) 'grad_files/SoS_3mm_FOV_192_3_6_2_5.grad'],[],[-3.7 -3 -3]);%trajectory files
 
 %% Set reconstruction parameters
 [~,header]=loadData([rawdata_path '/' mreg_filename],1);
@@ -60,7 +60,7 @@ save([recon_details.pname '/recon_details.mat'],'recon_details');
 
 % calculate the sensitivity map and field map
 if ~exist([recon_details.pname '/data.mat'],'file')
-    data=sensitivity_field_map([rawdata_path '/' mreg_filename],[rawdata_path '/' ref_filename],recon_details);
+    data=sensitivity_field_map([rawdata_path '/' mreg_filename],[rawdata_path '/' ref_filename],recon_details,traj);
     save([recon_details.pname '/data'],'data');
 end
 
